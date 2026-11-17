@@ -121,4 +121,1159 @@
     }
 
     .btn:hover {
-      background: var(--surface-
+      background: var(--surface-alt);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-danger {
+      color: var(--danger);
+      border-color: #fecaca;
+      background: #fef2f2;
+    }
+
+    .btn-danger:hover {
+      background: #fee2e2;
+    }
+
+    .btn-sm {
+      padding: 4px 9px;
+      font-size: 0.78rem;
+      border-radius: 8px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* Summary Dashboard */
+    .summary-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .total-kcal {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .total-kcal span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .goal-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .goal-controls strong {
+      color: var(--text);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 14px;
+      background: var(--surface-alt);
+      border-radius: 999px;
+      overflow: hidden;
+      display: flex;
+      margin-bottom: 16px;
+    }
+
+    .progress-segment {
+      height: 100%;
+      transition: width 0.25s ease;
+    }
+
+    .seg-protein { background: var(--protein); }
+    .seg-carbs { background: var(--carbs); }
+    .seg-fat { background: var(--fat); }
+
+    .macro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .macro-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .macro-box {
+      background: var(--surface-alt);
+      border-radius: 12px;
+      padding: 12px 14px;
+      border-left: 4px solid transparent;
+    }
+
+    .macro-box.protein { border-left-color: var(--protein); }
+    .macro-box.carbs { border-left-color: var(--carbs); }
+    .macro-box.fat { border-left-color: var(--fat); }
+
+    .macro-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .macro-values {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .macro-kcal {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .macro-grams {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Entry Form */
+    .mode-toggle {
+      display: inline-flex;
+      background: var(--surface-alt);
+      padding: 3px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+    }
+
+    .mode-toggle button {
+      border: none;
+      background: transparent;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .mode-toggle button.active {
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.6fr repeat(3, 1fr);
+      gap: 10px;
+      align-items: end;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .form-grid .span-full {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .field input:focus,
+    .field select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+    }
+
+    .form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .live-preview {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .live-preview strong {
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    /* Meal Breakdown */
+    .meals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 720px) {
+      .meals-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .meal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meal-title {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .meal-total {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .meal-submacros {
+      display: flex;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+
+    .entry-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .entry-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background: var(--surface-alt);
+      padding: 8px 10px;
+      border-radius: 9px;
+      font-size: 0.86rem;
+    }
+
+    .entry-info {
+      min-width: 0;
+    }
+
+    .entry-name {
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .entry-meta {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .entry-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .entry-kcal {
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .delete-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 6px;
+    }
+
+    .delete-btn:hover {
+      background: #fee2e2;
+      color: var(--danger);
+    }
+
+    .empty-state {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 18px 8px;
+    }
+
+    /* Modals & Toast */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      display: none;
+      place-items: center;
+      padding: 16px;
+      z-index: 100;
+    }
+
+    .modal-backdrop.open {
+      display: grid;
+    }
+
+    .modal {
+      background: var(--surface);
+      border-radius: var(--radius);
+      max-width: 420px;
+      width: 100%;
+      padding: 22px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+    }
+
+    .modal h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .modal p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #18202c;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: all 0.2s ease;
+      z-index: 200;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-icon">M</div>
+        <h1>MacroPulse</h1>
+      </div>
+
+      <div class="header-actions">
+        <div class="date-picker-wrap">
+          <button type="button" class="btn btn-sm" id="prevDayBtn" title="Previous day">&larr;</button>
+          <input type="date" id="datePicker" aria-label="Select date" />
+          <button type="button" class="btn btn-sm" id="nextDayBtn" title="Next day">&rarr;</button>
+        </div>
+        <button type="button" class="btn" id="exportBtn">Export JSON</button>
+        <button type="button" class="btn" id="importBtn">Import JSON</button>
+        <input type="file" id="importFileInput" accept=".json,application/json" hidden />
+        <button type="button" class="btn btn-danger" id="resetDayBtn">Reset Day</button>
+      </div>
+    </header>
+
+    <!-- Daily Summary Card -->
+    <section class="card" aria-label="Daily Summary">
+      <div class="summary-top">
+        <div>
+          <div class="total-kcal" id="totalKcalDisplay">0 <span>kcal</span></div>
+          <div style="font-size: 0.86rem; color: var(--text-muted); margin-top: 2px;" id="remainingText">
+            2,100 kcal remaining
+          </div>
+        </div>
+
+        <div class="goal-controls">
+          <span>Daily Goal: <strong id="goalDisplay">2,100</strong> kcal</span>
+          <button type="button" class="btn btn-sm" id="editGoalBtn">Edit</button>
+        </div>
+      </div>
+
+      <div class="progress-track" title="Macro distribution">
+        <div class="progress-segment seg-protein" id="barProtein" style="width: 0%"></div>
+        <div class="progress-segment seg-carbs" id="barCarbs" style="width: 0%"></div>
+        <div class="progress-segment seg-fat" id="barFat" style="width: 0%"></div>
+      </div>
+
+      <div class="macro-grid">
+        <div class="macro-box protein">
+          <div class="macro-label">
+            <span>Protein</span>
+            <span id="pctProtein">0%</span>
+          </div>
+          <div class="macro-values">
+            <span class="macro-kcal" id="kcalProtein">0 kcal</span>
+            <span class="macro-grams" id="gramsProtein">0g</span>
+          </div>
+        </div>
+
+        <div class="macro-box carbs">
+          <div class="macro-label">
+            <span>Carbs</span>
+            <span id="pctCarbs">0%</span>
+          </div>
+          <div class="macro-values">
+            <span class="macro-kcal" id="kcalCarbs">0 kcal</span>
+            <span class="macro-grams" id="gramsCarbs">0g</span>
+          </div>
+        </div>
+
+        <div class="macro-box fat">
+          <div class="macro-label">
+            <span>Fat</span>
+            <span id="pctFat">0%</span>
+          </div>
+          <div class="macro-values">
+            <span class="macro-kcal" id="kcalFat">0 kcal</span>
+            <span class="macro-grams" id="gramsFat">0g</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entry Form Card -->
+    <section class="card" aria-label="Log Food or Meal">
+      <div class="card-header">
+        <h2 class="card-title">Log Food / Meal</h2>
+        <div class="mode-toggle" role="group" aria-label="Input unit mode">
+          <button type="button" id="modeCaloriesBtn" class="active">Enter Calories</button>
+          <button type="button" id="modeGramsBtn">Enter Grams</button>
+        </div>
+      </div>
+
+      <form id="entryForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="mealSelect">Meal</label>
+            <select id="mealSelect">
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Snacks">Snacks</option>
+            </select>
+          </div>
+
+          <div class="field span-full">
+            <label for="foodNameInput">Food / Description (optional)</label>
+            <input type="text" id="foodNameInput" placeholder="e.g., Dutch baby + fried egg" />
+          </div>
+
+          <div class="field">
+            <label for="proteinInput" id="proteinLabel">Protein (kcal)</label>
+            <input type="number" id="proteinInput" min="0" step="any" placeholder="0" />
+          </div>
+
+          <div class="field">
+            <label for="carbsInput" id="carbsLabel">Carbs (kcal)</label>
+            <input type="number" id="carbsInput" min="0" step="any" placeholder="0" />
+          </div>
+
+          <div class="field">
+            <label for="fatInput" id="fatLabel">Fat (kcal)</label>
+            <input type="number" id="fatInput" min="0" step="any" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <div class="live-preview">
+            Entry Total: <strong id="entryPreviewKcal">0 kcal</strong>
+            <span id="entryPreviewBreakdown"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">+ Add Entry</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Meal Breakdown Grid -->
+    <section aria-label="Breakdown by Meal">
+      <div class="meals-grid" id="mealsContainer"></div>
+    </section>
+  </div>
+
+  <!-- Edit Goal Modal -->
+  <div class="modal-backdrop" id="goalModal">
+    <div class="modal">
+      <h3>Set Daily Calorie Goal</h3>
+      <p>Enter your target daily calorie intake in kcal.</p>
+      <div class="field" style="margin-bottom: 16px;">
+        <label for="goalInput">Daily Target (kcal)</label>
+        <input type="number" id="goalInput" min="500" max="15000" step="10" />
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn" id="cancelGoalBtn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="saveGoalBtn">Save Goal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reset Day Modal -->
+  <div class="modal-backdrop" id="resetModal">
+    <div class="modal">
+      <h3>Reset This Day?</h3>
+      <p id="resetModalText">This will permanently delete all logged entries for this date.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn" id="cancelResetBtn">Cancel</button>
+        <button type="button" class="btn btn-danger" id="confirmResetBtn">Delete Entries</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Confirmation Modal -->
+  <div class="modal-backdrop" id="importModal">
+    <div class="modal">
+      <h3>Import Backup Data</h3>
+      <p id="importModalSummary">Choose whether to merge this backup with your existing entries or replace all data.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn" id="cancelImportBtn">Cancel</button>
+        <button type="button" class="btn" id="mergeImportBtn">Merge Data</button>
+        <button type="button" class="btn btn-danger" id="replaceImportBtn">Replace All</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = "macropulse_data_v1";
+      const MEALS = ["Breakfast", "Lunch", "Dinner", "Snacks"];
+
+      let inputMode = "calories"; // "calories" | "grams"
+      let pendingImportData = null;
+
+      function getLocalToday() {
+        const now = new Date();
+        const offset = now.getTimezoneOffset();
+        const local = new Date(now.getTime() - offset * 60000);
+        return local.toISOString().split("T")[0];
+      }
+
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed && typeof parsed === "object") {
+              return {
+                goal: Number(parsed.goal) > 0 ? Number(parsed.goal) : 2100,
+                days: parsed.days && typeof parsed.days === "object" ? parsed.days : {}
+              };
+            }
+          }
+        } catch (e) {
+          console.error("Failed to read storage:", e);
+        }
+        return { goal: 2100, days: {} };
+      }
+
+      let state = loadState();
+      let currentDate = getLocalToday();
+
+      function saveState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+
+      function showToast(msg) {
+        const toast = document.getElementById("toast");
+        toast.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(showToast._t);
+        showToast._t = setTimeout(() => toast.classList.remove("show"), 2600);
+      }
+
+      function round1(num) {
+        return Math.round(num * 10) / 10;
+      }
+
+      function formatNum(num) {
+        return Math.round(num).toLocaleString();
+      }
+
+      // DOM elements
+      const datePicker = document.getElementById("datePicker");
+      const prevDayBtn = document.getElementById("prevDayBtn");
+      const nextDayBtn = document.getElementById("nextDayBtn");
+      const modeCaloriesBtn = document.getElementById("modeCaloriesBtn");
+      const modeGramsBtn = document.getElementById("modeGramsBtn");
+      const proteinLabel = document.getElementById("proteinLabel");
+      const carbsLabel = document.getElementById("carbsLabel");
+      const fatLabel = document.getElementById("fatLabel");
+      const proteinInput = document.getElementById("proteinInput");
+      const carbsInput = document.getElementById("carbsInput");
+      const fatInput = document.getElementById("fatInput");
+      const foodNameInput = document.getElementById("foodNameInput");
+      const mealSelect = document.getElementById("mealSelect");
+      const entryPreviewKcal = document.getElementById("entryPreviewKcal");
+      const entryPreviewBreakdown = document.getElementById("entryPreviewBreakdown");
+
+      datePicker.value = currentDate;
+
+      function shiftDate(daysDelta) {
+        const [y, m, d] = currentDate.split("-").map(Number);
+        const dt = new Date(y, m - 1, d + daysDelta);
+        const yyyy = dt.getFullYear();
+        const mm = String(dt.getMonth() + 1).padStart(2, "0");
+        const dd = String(dt.getDate()).padStart(2, "0");
+        currentDate = `${yyyy}-${mm}-${dd}`;
+        datePicker.value = currentDate;
+        render();
+      }
+
+      prevDayBtn.addEventListener("click", () => shiftDate(-1));
+      nextDayBtn.addEventListener("click", () => shiftDate(1));
+      datePicker.addEventListener("change", () => {
+        if (datePicker.value) {
+          currentDate = datePicker.value;
+          render();
+        }
+      });
+
+      function setInputMode(mode) {
+        inputMode = mode;
+        modeCaloriesBtn.classList.toggle("active", mode === "calories");
+        modeGramsBtn.classList.toggle("active", mode === "grams");
+        const unit = mode === "calories" ? "kcal" : "g";
+        proteinLabel.textContent = `Protein (${unit})`;
+        carbsLabel.textContent = `Carbs (${unit})`;
+        fatLabel.textContent = `Fat (${unit})`;
+        updateEntryPreview();
+      }
+
+      modeCaloriesBtn.addEventListener("click", () => setInputMode("calories"));
+      modeGramsBtn.addEventListener("click", () => setInputMode("grams"));
+
+      function computeInputMacros() {
+        const rawP = Math.max(0, parseFloat(proteinInput.value) || 0);
+        const rawC = Math.max(0, parseFloat(carbsInput.value) || 0);
+        const rawF = Math.max(0, parseFloat(fatInput.value) || 0);
+
+        if (inputMode === "grams") {
+          return {
+            proteinKcal: round1(rawP * 4),
+            carbsKcal: round1(rawC * 4),
+            fatKcal: round1(rawF * 9)
+          };
+        }
+        return {
+          proteinKcal: round1(rawP),
+          carbsKcal: round1(rawC),
+          fatKcal: round1(rawF)
+        };
+      }
+
+      function updateEntryPreview() {
+        const { proteinKcal, carbsKcal, fatKcal } = computeInputMacros();
+        const total = round1(proteinKcal + carbsKcal + fatKcal);
+        entryPreviewKcal.textContent = `${formatNum(total)} kcal`;
+        if (total > 0) {
+          entryPreviewBreakdown.textContent = ` (P: ${Math.round(proteinKcal)} · C: ${Math.round(carbsKcal)} · F: ${Math.round(fatKcal)})`;
+        } else {
+          entryPreviewBreakdown.textContent = "";
+        }
+      }
+
+      [proteinInput, carbsInput, fatInput].forEach((el) => {
+        el.addEventListener("input", updateEntryPreview);
+      });
+
+      document.getElementById("entryForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const { proteinKcal, carbsKcal, fatKcal } = computeInputMacros();
+        const totalKcal = round1(proteinKcal + carbsKcal + fatKcal);
+
+        if (totalKcal <= 0) {
+          showToast("Enter at least one macro value greater than 0.");
+          return;
+        }
+
+        const meal = mealSelect.value;
+        const name = foodNameInput.value.trim() || `${meal} item`;
+
+        if (!state.days[currentDate]) {
+          state.days[currentDate] = [];
+        }
+
+        state.days[currentDate].push({
+          id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+          meal,
+          name,
+          proteinKcal,
+          carbsKcal,
+          fatKcal,
+          totalKcal
+        });
+
+        saveState();
+        foodNameInput.value = "";
+        proteinInput.value = "";
+        carbsInput.value = "";
+        fatInput.value = "";
+        updateEntryPreview();
+        render();
+        showToast(`Added ${formatNum(totalKcal)} kcal to ${meal}`);
+      });
+
+      function deleteEntry(id) {
+        const list = state.days[currentDate];
+        if (!list) return;
+        state.days[currentDate] = list.filter((item) => item.id !== id);
+        if (state.days[currentDate].length === 0) {
+          delete state.days[currentDate];
+        }
+        saveState();
+        render();
+        showToast("Entry removed");
+      }
+
+      function render() {
+        const entries = state.days[currentDate] || [];
+
+        let totalP = 0;
+        let totalC = 0;
+        let totalF = 0;
+
+        entries.forEach((item) => {
+          totalP += Number(item.proteinKcal) || 0;
+          totalC += Number(item.carbsKcal) || 0;
+          totalF += Number(item.fatKcal) || 0;
+        });
+
+        const totalKcal = totalP + totalC + totalF;
+        const goal = state.goal;
+        const diff = goal - totalKcal;
+
+        document.getElementById("totalKcalDisplay").innerHTML = `${formatNum(totalKcal)} <span>kcal</span>`;
+        document.getElementById("goalDisplay").textContent = formatNum(goal);
+
+        const remainingEl = document.getElementById("remainingText");
+        if (diff >= 0) {
+          remainingEl.textContent = `${formatNum(diff)} kcal remaining`;
+          remainingEl.style.color = "var(--text-muted)";
+        } else {
+          remainingEl.textContent = `${formatNum(Math.abs(diff))} kcal over daily goal`;
+          remainingEl.style.color = "var(--danger)";
+        }
+
+        // Progress bar proportions relative to max(totalKcal, goal)
+        const denom = Math.max(totalKcal, goal, 1);
+        document.getElementById("barProtein").style.width = `${(totalP / denom) * 100}%`;
+        document.getElementById("barCarbs").style.width = `${(totalC / denom) * 100}%`;
+        document.getElementById("barFat").style.width = `${(totalF / denom) * 100}%`;
+
+        // Macro cards
+        const macroSum = Math.max(totalKcal, 1);
+        const pctP = totalKcal > 0 ? Math.round((totalP / macroSum) * 100) : 0;
+        const pctC = totalKcal > 0 ? Math.round((totalC / macroSum) * 100) : 0;
+        const pctF = totalKcal > 0 ? Math.round((totalF / macroSum) * 100) : 0;
+
+        document.getElementById("pctProtein").textContent = `${pctP}%`;
+        document.getElementById("pctCarbs").textContent = `${pctC}%`;
+        document.getElementById("pctFat").textContent = `${pctF}%`;
+
+        document.getElementById("kcalProtein").textContent = `${formatNum(totalP)} kcal`;
+        document.getElementById("kcalCarbs").textContent = `${formatNum(totalC)} kcal`;
+        document.getElementById("kcalFat").textContent = `${formatNum(totalF)} kcal`;
+
+        document.getElementById("gramsProtein").textContent = `${round1(totalP / 4)}g`;
+        document.getElementById("gramsCarbs").textContent = `${round1(totalC / 4)}g`;
+        document.getElementById("gramsFat").textContent = `${round1(totalF / 9)}g`;
+
+        // Render Meal Cards
+        const mealsContainer = document.getElementById("mealsContainer");
+        mealsContainer.innerHTML = "";
+
+        MEALS.forEach((mealName) => {
+          const mealEntries = entries.filter((e) => e.meal === mealName);
+          let mP = 0, mC = 0, mF = 0;
+          mealEntries.forEach((e) => {
+            mP += Number(e.proteinKcal) || 0;
+            mC += Number(e.carbsKcal) || 0;
+            mF += Number(e.fatKcal) || 0;
+          });
+          const mTotal = mP + mC + mF;
+
+          const card = document.createElement("div");
+          card.className = "meal-card";
+
+          const header = document.createElement("div");
+          header.className = "meal-header";
+          header.innerHTML = `
+            <span class="meal-title">${mealName}</span>
+            <span class="meal-total">${formatNum(mTotal)} kcal</span>
+          `;
+          card.appendChild(header);
+
+          const submacros = document.createElement("div");
+          submacros.className = "meal-submacros";
+          submacros.innerHTML = `
+            <span><i class="dot" style="background:var(--protein)"></i>P: ${Math.round(mP)} kcal (${round1(mP / 4)}g)</span>
+            <span><i class="dot" style="background:var(--carbs)"></i>C: ${Math.round(mC)} kcal (${round1(mC / 4)}g)</span>
+            <span><i class="dot" style="background:var(--fat)"></i>F: ${Math.round(mF)} kcal (${round1(mF / 9)}g)</span>
+          `;
+          card.appendChild(submacros);
+
+          if (mealEntries.length === 0) {
+            const empty = document.createElement("div");
+            empty.className = "empty-state";
+            empty.textContent = `No items logged for ${mealName.toLowerCase()}.`;
+            card.appendChild(empty);
+          } else {
+            const ul = document.createElement("ul");
+            ul.className = "entry-list";
+
+            mealEntries.forEach((item) => {
+              const li = document.createElement("li");
+              li.className = "entry-item";
+
+              const info = document.createElement("div");
+              info.className = "entry-info";
+
+              const nameEl = document.createElement("div");
+              nameEl.className = "entry-name";
+              nameEl.textContent = item.name;
+
+              const metaEl = document.createElement("div");
+              metaEl.className = "entry-meta";
+              metaEl.textContent = `P: ${Math.round(item.proteinKcal)} · C: ${Math.round(item.carbsKcal)} · F: ${Math.round(item.fatKcal)} kcal`;
+
+              info.appendChild(nameEl);
+              info.appendChild(metaEl);
+
+              const right = document.createElement("div");
+              right.className = "entry-right";
+
+              const kcalEl = document.createElement("span");
+              kcalEl.className = "entry-kcal";
+              kcalEl.textContent = `${formatNum(item.totalKcal)} kcal`;
+
+              const delBtn = document.createElement("button");
+              delBtn.type = "button";
+              delBtn.className = "delete-btn";
+              delBtn.title = "Delete entry";
+              delBtn.innerHTML = "&times;";
+              delBtn.addEventListener("click", () => deleteEntry(item.id));
+
+              right.appendChild(kcalEl);
+              right.appendChild(delBtn);
+
+              li.appendChild(info);
+              li.appendChild(right);
+              ul.appendChild(li);
+            });
+
+            card.appendChild(ul);
+          }
+
+          mealsContainer.appendChild(card);
+        });
+      }
+
+      // Edit Goal Modal
+      const goalModal = document.getElementById("goalModal");
+      const goalInput = document.getElementById("goalInput");
+
+      document.getElementById("editGoalBtn").addEventListener("click", () => {
+        goalInput.value = state.goal;
+        goalModal.classList.add("open");
+        goalInput.focus();
+      });
+
+      document.getElementById("cancelGoalBtn").addEventListener("click", () => {
+        goalModal.classList.remove("open");
+      });
+
+      document.getElementById("saveGoalBtn").addEventListener("click", () => {
+        const val = parseInt(goalInput.value, 10);
+        if (val && val >= 500 && val <= 15000) {
+          state.goal = val;
+          saveState();
+          render();
+          goalModal.classList.remove("open");
+          showToast(`Daily goal updated to ${formatNum(val)} kcal`);
+        } else {
+          showToast("Enter a goal between 500 and 15,000 kcal.");
+        }
+      });
+
+      // Reset Day Modal
+      const resetModal = document.getElementById("resetModal");
+      document.getElementById("resetDayBtn").addEventListener("click", () => {
+        const count = (state.days[currentDate] || []).length;
+        if (count === 0) {
+          showToast("No entries to clear for this date.");
+          return;
+        }
+        document.getElementById("resetModalText").textContent =
+          `Delete all ${count} logged item(s) for ${currentDate}?`;
+        resetModal.classList.add("open");
+      });
+
+      document.getElementById("cancelResetBtn").addEventListener("click", () => {
+        resetModal.classList.remove("open");
+      });
+
+      document.getElementById("confirmResetBtn").addEventListener("click", () => {
+        delete state.days[currentDate];
+        saveState();
+        render();
+        resetModal.classList.remove("open");
+        showToast(`Cleared logs for ${currentDate}`);
+      });
+
+      // Export JSON
+      document.getElementById("exportBtn").addEventListener("click", () => {
+        const payload = {
+          app: "MacroPulse",
+          version: 1,
+          exportedAt: new Date().toISOString(),
+          goal: state.goal,
+          days: state.days
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `macropulse-backup-${getLocalToday()}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("Backup exported as JSON");
+      });
+
+      // Import JSON
+      const importFileInput = document.getElementById("importFileInput");
+      const importModal = document.getElementById("importModal");
+
+      document.getElementById("importBtn").addEventListener("click", () => {
+        importFileInput.value = "";
+        importFileInput.click();
+      });
+
+      importFileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          try {
+            const parsed = JSON.parse(evt.target.result);
+            if (!parsed || typeof parsed !== "object" || typeof parsed.days !== "object" || Array.isArray(parsed.days)) {
+              throw new Error("Invalid schema");
+            }
+
+            let totalEntries = 0;
+            const dayKeys = Object.keys(parsed.days);
+            for (const dateKey of dayKeys) {
+              if (!Array.isArray(parsed.days[dateKey])) {
+                throw new Error("Invalid day entries");
+              }
+              totalEntries += parsed.days[dateKey].length;
+            }
+
+            pendingImportData = {
+              goal: Number(parsed.goal) > 0 ? Number(parsed.goal) : state.goal,
+              days: parsed.days
+            };
+
+            document.getElementById("importModalSummary").textContent =
+              `Found ${totalEntries} entries across ${dayKeys.length} day(s) (Goal: ${formatNum(pendingImportData.goal)} kcal). Merge with your current logs or replace everything?`;
+            importModal.classList.add("open");
+          } catch (err) {
+            showToast("Invalid backup JSON file.");
+          }
+        };
+        reader.readAsText(file);
+      });
+
+      document.getElementById("cancelImportBtn").addEventListener("click", () => {
+        pendingImportData = null;
+        importModal.classList.remove("open");
+      });
+
+      document.getElementById("mergeImportBtn").addEventListener("click", () => {
+        if (!pendingImportData) return;
+        let added = 0;
+
+        for (const [dateKey, items] of Object.entries(pendingImportData.days)) {
+          if (!state.days[dateKey]) {
+            state.days[dateKey] = [];
+          }
+          const existingIds = new Set(state.days[dateKey].map((x) => x.id));
+          items.forEach((item) => {
+            if (item && typeof item === "object" && !existingIds.has(item.id)) {
+              state.days[dateKey].push({
+                id: item.id || `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+                meal: MEALS.includes(item.meal) ? item.meal : "Snacks",
+                name: String(item.name || "Imported item"),
+                proteinKcal: Number(item.proteinKcal) || 0,
+                carbsKcal: Number(item.carbsKcal) || 0,
+                fatKcal: Number(item.fatKcal) || 0,
+                totalKcal: Number(item.totalKcal) || 0
+              });
+              added++;
+            }
+          });
+        }
+
+        saveState();
+        render();
+        pendingImportData = null;
+        importModal.classList.remove("open");
+        showToast(`Merged ${added} new entry(s)`);
+      });
+
+      document.getElementById("replaceImportBtn").addEventListener("click", () => {
+        if (!pendingImportData) return;
+        const cleanDays = {};
+        for (const [dateKey, items] of Object.entries(pendingImportData.days)) {
+          cleanDays[dateKey] = items.map((item) => ({
+            id: item.id || `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+            meal: MEALS.includes(item.meal) ? item.meal : "Snacks",
+            name: String(item.name || "Imported item"),
+            proteinKcal: Number(item.proteinKcal) || 0,
+            carbsKcal: Number(item.carbsKcal) || 0,
+            fatKcal: Number(item.fatKcal) || 0,
+            totalKcal: Number(item.totalKcal) || 0
+          }));
+        }
+
+        state = {
+          goal: pendingImportData.goal,
+          days: cleanDays
+        };
+
+        saveState();
+        render();
+        pendingImportData = null;
+        importModal.classList.remove("open");
+        showToast("All data replaced from backup");
+      });
+
+      // Close modals on backdrop click
+      [goalModal, resetModal, importModal].forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("open");
+            if (modal === importModal) pendingImportData = null;
+          }
+        });
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
